@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Ryan's Fibonacci Sequence</title> 
+   <script>
+	   "use strict"
+       var numFib = prompt("How many numbers in the sequence?");
+       numFib = parseFloat(numFib);
+       if (numFib <= 3) {
+               alert("The sequence muts have more than 3 numbers.");
+       } else {
+           // alert("That worked.");
+           var myFib = [];  // declare the array
+           myFib[0] = 0;
+           myFib[1] = 1;
+               // fill the array
+           for (let i = 2; i <= numFib; i++) {
+                 myFib[i] = myFib[i - 1] + myFib[i - 2];
+               }
+               // write out the results
+           for (let i = 0; i < numFib; i++) {
+               document.write(myFib[i] + " ");
+               }
+           } 
+           // calculate the ratio
+       var ratioOne = myFib[myFib.length - 1];
+       var ratioTwo = myFib[myFib.length - 2];
+       var ratio = ratioOne / ratioTwo; 
+           document.write("Ratio: " + ratio);
+	</script>
+</head> 
+<body>
+   <h2>Ryan Dunphy - IT 2320 - Lab 2</h2>
+    <p id="numFib"></p>
+    <script>document.getElementById("numFib").innerHTML = ("The number you entered is " + numFib);</script>
+</body> 
+</html>
